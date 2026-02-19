@@ -7,7 +7,7 @@ test('Login HP', {tag:'@regression'}, async ({ page }) => {
   const loginPage = new LoginPage (page)
   const inventoryPage = new InventoryPage(page)
   await page.goto('https://www.saucedemo.com/');
-  await loginPage.login('standard_user','secret_sauce')
+  await loginPage.login('standard_user','password_erroneo')
   await inventoryPage.validar_products()
 
 });
